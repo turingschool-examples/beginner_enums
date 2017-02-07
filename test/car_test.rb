@@ -10,19 +10,17 @@ class CarTest < Minitest::Test
   end
 
   def test_navy_bean_year_is_2010
-    skip
     navy_bean = Car.new(2010, "Nissan")
     assert_equal 2010, navy_bean.year
   end
 
   def test_navy_bean_make_nissan
-    skip
+
     navy_bean = Car.new(2010, "Nissan")
     assert_equal "Nissan", navy_bean.make
   end
 
   def test_can_make_cars_with_other_info
-    skip
     other_car = Car.new(2004, "BMW")
     assert_equal 2004, other_car.year
     assert_equal "BMW", other_car.make

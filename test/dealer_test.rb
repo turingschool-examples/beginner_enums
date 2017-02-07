@@ -25,32 +25,26 @@ attr_reader :dealer, :navy_bean, :red_panther, :green_dragon, :pink_butterfly
   end
 
   def test_dealer_has_empty_inventory_to_begin
-    skip
     assert_equal [navy_bean, red_panther, green_dragon, pink_butterfly], dealer.inventory
   end
 
   def test_dealer_can_add_cars_to_inventory
-    skip
     assert_equal 4, dealer.inventory.count
   end
 
   def test_dealer_can_return_all_cars_by_make_only
-    skip
     assert_equal ["Nissan", "Jaguar", "Honda", "Nissan"], dealer.all_makes
   end
 
   def test_dealer_can_return_all_cars_by_year_only
-    skip
-    assert_equal [2010, 1983, 1999, 2000], car.all_years
+    assert_equal [2010, 1983, 1999, 2000], dealer.all_years
   end
 
   def test_can_find_the_first_of_a_make
-    skip
-    assert_equal navy_bean, car.find_first("Nissan")
+    assert_equal navy_bean, dealer.find_first("Nissan")
   end
 
   def test_can_find_all_of_a_make
-    skip
-    assert_equal [navy_bean, pink_butterfly], car.find_many("Nissan")
+    assert_equal [navy_bean, pink_butterfly], dealer.find_many("Nissan")
   end
 end
